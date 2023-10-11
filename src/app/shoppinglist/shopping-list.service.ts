@@ -9,12 +9,12 @@ export class ShoppingListService {
     new Ingredient('Apples', 5),
     new Ingredient('Tomatoes', 10),
   ];
-
-  constructor(private ingredient: Ingredient) { }
   
   getIngredients() {
     return this.ingredients.slice();
   }
 
-
+  addIngredient(ingredient: Ingredient) {
+    this.ingredients.push(ingredient);
+  }
 }

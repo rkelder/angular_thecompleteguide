@@ -5,8 +5,7 @@ import { ShoppingListService } from './shopping-list.service';
 @Component({
   selector: 'app-shoppinglist',
   templateUrl: './shoppinglist.component.html',
-  styleUrls: ['./shoppinglist.component.css'],
-  providers: [ShoppingListService]
+  styleUrls: ['./shoppinglist.component.css']
 })
 export class ShoppinglistComponent implements OnInit {
   ingredients!: Ingredient[]
@@ -16,9 +15,5 @@ export class ShoppinglistComponent implements OnInit {
   ngOnInit() {
     this.ingredients = this.shoppingListService.getIngredients();
   }
-
-  onIngredientAdded(ingredient: Ingredient) {
-    this.ingredients.push(ingredient);
-  } 
 
 }
