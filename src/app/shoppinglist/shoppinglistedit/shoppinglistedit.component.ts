@@ -29,3 +29,4 @@ export class ShoppinglisteditComponent implements OnInit {
     this.shoppingListService.addIngredient(newIngredient);
   }
 }
+ */

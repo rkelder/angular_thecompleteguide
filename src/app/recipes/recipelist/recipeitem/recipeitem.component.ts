@@ -9,7 +9,7 @@ import { RecipeService } from '../../recipe.service';
 })
 export class RecipeitemComponent implements OnInit {
   @Input()
-  recipe: Recipe = { name: '', description: '', imagePath: '', ingredients: [] };
+  recipe!: Recipe
 
   constructor(private recipeService: RecipeService) {}
 
@@ -19,3 +19,4 @@ export class RecipeitemComponent implements OnInit {
     this.recipeService.recipeSelected.emit(this.recipe)
   }
 }
+
